@@ -16,3 +16,9 @@ body {
     height: 600px;
     width: 600px;
 }
+
+.player-shooter {
+    position: relative;
+    left: 20px;
+    top: 250px;
+}
