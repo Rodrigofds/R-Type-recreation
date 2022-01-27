@@ -22,3 +22,9 @@ body {
     left: 20px;
     top: 250px;
 }
+
+.shoot {
+    position: relative;
+    width: 50px;
+    height: 15px;
+}
