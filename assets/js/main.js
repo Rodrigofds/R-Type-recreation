@@ -1,5 +1,6 @@
 const playerShip = document.querySelector('.player-shooter');
 const playArea = document.querySelector('#main-play-area');
+const enemiesImg = ['./img/monster-1.png', './img/monster-2.png', './img/monster-3.png' ];
 
 // Controla o movimento e ação de tiro da nave.
 function toMove(event){
@@ -73,6 +74,18 @@ function moveShoot(shoot){
         }
             
     }, 15);
+}
+
+function createEnemies(){
+    let newEnemy = document.createElement('img');
+    let enemySprite = enemiesImg[Math.floor(Math.random() * enemiesImg.length)];
+    newEnemy.src = enemySprite;
+    newEnemy.classList.add('enemy');
+    newEnemy.classList.add('enemy-transition');
+    newEnemy.style.left = '370px';
+    newEnemy.style.top = `${Math.floor(Math.random() * 330) + 30}px`;
+    playArea.appendChild(newEnemy);
+    moveEnemy(newEnemy);
 }
 
 window.addEventListener('keydown', toMove);
