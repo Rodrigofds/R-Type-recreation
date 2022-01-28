@@ -85,7 +85,7 @@ function moveShoot(shoot) {
 // Cria inimigos aleatórios
 function createEnemies() {
     let newEnemy = document.createElement('img');
-    let enemySprite = enemiesImg[Math.floor(Math.random() * enemiesImg.length)]; //sorteio de imagens
+    let enemySprite = enemiesImg[Math.floor(Math.random() * enemiesImg.length)];
     newEnemy.src = enemySprite;
     newEnemy.classList.add('enemy');
     newEnemy.classList.add('enemy-transition');
